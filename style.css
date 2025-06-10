@@ -309,6 +309,93 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Contact Section */
+#contact {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #2dd4bf;
+  padding: 10rem 9%;
+  display: flex;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.contact-container p {
+  font-size: 2rem;
+  color: #374151;
+  margin-bottom: 3rem;
+}
+
+.contact-container p a {
+  color: var(--main-color);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.contact-container p a:hover {
+  color: #ff2a00;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.8rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: #374151;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 8px rgba(255, 87, 51, 0.2);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 10rem;
+}
+
+.contact-form button {
+  display: block;
+  margin: 0 auto;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .projects-grid {
@@ -341,7 +428,7 @@ body {
     margin: 3rem 0;
   }
 
-  #home, #about, #project {
+  #home, #about, #project, #contact {
     padding: 5rem 3%;
   }
 
@@ -394,6 +481,27 @@ body {
   }
 
   .project-content p {
+    font-size: 1.4rem;
+  }
+
+  .contact-container h2 {
+    font-size: 3.5rem;
+  }
+
+  .contact-container p {
+    font-size: 1.5rem;
+  }
+
+  .contact-form {
+    padding: 2rem;
+  }
+
+  .form-group label {
+    font-size: 1.6rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
     font-size: 1.4rem;
   }
 }

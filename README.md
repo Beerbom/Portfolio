@@ -22,7 +22,7 @@ This is my **personal portfolio website** built using HTML, CSS, and a bit of Ja
 - **HTML5** 📄
 - **CSS3** 🎨
 - **JavaScript** (optional, for interactivity) ⚡
-- 
+  
 ---
 
 ## 💻 Usage

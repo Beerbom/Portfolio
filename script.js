@@ -18,12 +18,25 @@ document.getElementById('menu-icon').addEventListener('click', () => {
     const text = typewriter.textContent;
     typewriter.textContent = '';
     let i = 0;
+    let isDeleting = false;
   
     function type() {
-      if (i < text.length) {
-        typewriter.textContent += text.charAt(i);
+      const currentText = typewriter.textContent;
+  
+      if (!isDeleting && i < text.length) {
+        typewriter.textContent = currentText + text.charAt(i);
         i++;
-        setTimeout(type, 100);
+        setTimeout(type, 100); 
+      } else if (isDeleting && i > 0) {
+        typewriter.textContent = currentText.slice(0, -1);
+        i--;
+        setTimeout(type, 50); 
+      } else if (i === text.length) {
+        isDeleting = true;
+        setTimeout(type, 1500); 
+      } else if (i === 0) {
+        isDeleting = false;
+        setTimeout(type, 500); 
       }
     }
     setTimeout(type, 500);
